@@ -1,6 +1,10 @@
 {
   "name": "fcc-learn-node-with-express",
   "version": "0.1.0",
+  "author": "Nicole Rosas",
+  "description": "Aprendiendo Node.js y express",
+  "keywords": [ "Aprendiendo", "Node.js", "Express" ],
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
