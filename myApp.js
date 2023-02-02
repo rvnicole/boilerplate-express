@@ -27,7 +27,7 @@ app.get("/json", (req, res) => {
 
 //process.env.MESSAGE_STYLE=uppercase;
 
-app.use( ( req, res, next ) => {
+app.use( function( req, res, next ){
   console.log( req );
   console.log( req.method + " " + req.path + " - " + req.ip );
   next();
