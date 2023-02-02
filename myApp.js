@@ -17,7 +17,7 @@ app.use("/public", express.static(__dirname + "/public"));
 //process.env.MESSAGE_STYLE=uppercase;
 
 app.use( "/json", function( req, res, next ){
-  console.log( req );
+  //console.log( req );
   console.log( req.method + " " + req.path + " - " + req.ip );
   next();
 });
