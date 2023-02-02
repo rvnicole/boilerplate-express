@@ -13,6 +13,15 @@ app.get("/", (req, res) => {
 
 app.use("/public", express.static(__dirname + "/public"));
 
+
+//process.env.MESSAGE_STYLE=uppercase;
+
+app.use( "/json", function( req, res, next ){
+  console.log( req );
+  console.log( req.method + " " + req.path + " - " + req.ip );
+  next();
+});
+
 app.get("/json", (req, res) => {
   let cadena = "Hello json";
 
@@ -23,14 +32,6 @@ app.get("/json", (req, res) => {
   }
 
   res.json({ "message": cadena });
-});
-
-//process.env.MESSAGE_STYLE=uppercase;
-
-app.use( "/json", function( req, res, next ){
-  console.log( req );
-  console.log( req.method + " " + req.path + " - " + req.ip );
-  next();
 });
 
 
