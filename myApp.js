@@ -45,7 +45,7 @@ app.get( "/now", ( req, res, next ) => {
 
 });
 
-app.get( "/:world/echo", ( req, res ) => {
+app.get( "/:word/echo", ( req, res ) => {
   res.send( { echo : word } );
 });
 
