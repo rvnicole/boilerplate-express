@@ -4,7 +4,6 @@ let app = express();
 let bodyParser = require( 'body-parser' );
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
 console.log("Hello World");
 
 app.get("/hola", (req, res) => {
@@ -60,8 +59,15 @@ app.get( "/name", ( req, res ) => {
 
   const { first, last } = req.query;
   res.json( { name: first + " " + last } );
+
 });
 
+app.post( "/name", ( req, res ) => {
+
+  const { first, last } = req.body;
+  res.json( { name: first + " " + last } );
+  
+});
 
 
 
