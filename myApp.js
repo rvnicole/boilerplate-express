@@ -45,6 +45,10 @@ app.get( "/now", ( req, res, next ) => {
 
 });
 
+app.get( "/:world/echo", ( req, res ) => {
+  res.send( { echo : word } );
+});
+
 
 
 
